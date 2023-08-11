@@ -46,6 +46,7 @@ public class Lab4P2_Grupo11 {
                     } while (dinero < 1);
                     Entrenador T = new Entrenador(nombre, edad, dinero);
                     trainer.add(T);
+                    
 
                 }
                 break;
@@ -54,22 +55,89 @@ public class Lab4P2_Grupo11 {
                 }
                 break;
                 case 3: {
-
-                }
+                    if (trainer.isEmpty()) {
+                        System.out.println("No hay Entrenadores");
+                    }else{
+                    imprimirtrainer(trainer);
+                    System.out.println("\n Seleccione el entrenador que desea: ");
+                    int pos = leer.nextInt()-1;
+                    Entrenador cons = trainer.get(pos);
+                        System.out.println(cons +"\n ¿Desea ir a la caja o los  principales?");
+                        String des= leer.next().toLowerCase();
+                        switch(des){
+                            case "caja":{
+                               imprimircaja(trainer);
+                                System.out.println("Que Pokemon desea elegir");
+                                
+                            }
+                            break;
+                            case "principales":{
+                                imprimirprincipal(trainer);
+                                System.out.println("Que Pokemon desea elegir");
+                            }
+                            break;
+                            default:{
+                                
+                            }
+                            break;
+                        }
+                    
+                    
+                    
+                    }
+                    }
                 break;
                 case 4: {
 
                 }
                 break;
-                case 0:{
+                case 0: {
                     System.out.println("Adios...");
                 }
                 break;
-                default:{
+                default: {
                     System.out.println("No Valido");
                 }
                 break;
             }
         } while (res != 0);
+    }
+
+    
+     public static void imprimirtrainer(ArrayList<Entrenador> t) {
+       
+
+            String no = "";
+            for (int i = 0; i < t.size(); i++) {
+                no += i + 1 + "." + t.get(i).toString() + "\n";
+            }
+            System.out.println(no);
+
+        
+    }
+    
+     public static void imprimirprincipal(ArrayList<Entrenador> t) {
+       
+
+            String no = "";
+            for (int i = 0; i < t.size(); i++) {
+                no += i + 1 + "." + t.get(i).getPokemon().toString() + "\n";
+            }
+            System.out.println(no);
+
+        
+    }
+    
+     
+      public static void imprimircaja(ArrayList<Entrenador> t) {
+       
+
+            String no = "";
+            for (int i = 0; i < t.size(); i++) {
+                no += i + 1 + "." + t.get(i).getCaja().toString() + "\n";
+            }
+            System.out.println(no);
+
+        
     }
 }
