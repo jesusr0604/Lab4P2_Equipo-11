@@ -1,12 +1,10 @@
-
 package lab4p2_grupo11;
 
-
-public class FisicoyEspecial extends Movimiento{
+public class ATTK extends Movimiento{
     public int PuntosDePoder;
     public int PuntosDePresicion;
 
-    public FisicoyEspecial(int PuntosDePoder, int PuntosDePresicion, String nombre, String Descripcion) {
+    public ATTK(int PuntosDePoder, int PuntosDePresicion, String nombre, String Descripcion) {
         super(nombre, Descripcion);
         this.PuntosDePoder = PuntosDePoder;
         this.PuntosDePresicion = PuntosDePresicion;
@@ -32,7 +30,7 @@ public class FisicoyEspecial extends Movimiento{
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+        public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -46,8 +44,9 @@ public class FisicoyEspecial extends Movimiento{
 
     @Override
     public String toString() {
-        return "FisicoyEspecial{" + "PuntosDePoder=" + PuntosDePoder + ", PuntosDePresicion=" + PuntosDePresicion + '}';
+        return "ATTK{" + "PuntosDePoder=" + PuntosDePoder + ", PuntosDePresicion=" + PuntosDePresicion + '}';
     }
+    
     
     
 }
