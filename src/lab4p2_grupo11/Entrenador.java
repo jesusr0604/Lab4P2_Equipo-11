@@ -8,7 +8,7 @@ public class Entrenador {
     private String nombre;
     private int edad;
     private double dinero;
-    private String[] Pokemon;
+    private Pokemon[] Pokemon = new Pokemon[5];
     private ArrayList<Pokemon>caja;
 
     public Entrenador() {
@@ -23,7 +23,7 @@ public class Entrenador {
     
     
 
-    public Entrenador(String nombre, int edad, double dinero, String[] Pokemon) {
+    public Entrenador(String nombre, int edad, double dinero, Pokemon[] Pokemon) {
         this.nombre = nombre;
         this.edad = edad;
         this.dinero = dinero;
@@ -55,11 +55,11 @@ public class Entrenador {
         this.dinero = dinero;
     }
 
-    public String[] getPokemon() {
+    public Pokemon[] getPokemon() {
         return Pokemon;
     }
 
-    public void setPokemon(String[] Pokemon) {
+    public void setPokemon(Pokemon[] Pokemon) {
         this.Pokemon = Pokemon;
     }
 
@@ -69,12 +69,16 @@ public class Entrenador {
 
     public void setCaja(ArrayList<Pokemon> caja) {
         this.caja = caja;
+                
+                
     }
 
     @Override
     public String toString() {
         return "Entrenador{" + "nombre=" + nombre + ", edad=" + edad + ", dinero=" + dinero + ", Pokemon=" + Pokemon + ", caja=" + caja + '}';
     }
+
+    
     
     
 }
