@@ -23,7 +23,7 @@ public class Lab4P2_Grupo11 {
         ArrayList<Entrenador> trainer = new ArrayList();
         int res = 0;
         do {
-            System.out.println("----- Bienvenido al sistema de carros de la Alcaldia de Tegucigalpa -----"
+            System.out.println("----- Bienvenido al Sistema Pokemon -----"
                     + "\n1 -> Registrar entrenador "
                     + "\n2 -> Battle Factory "
                     + "\n3 ->  Capturar/Entrenar"
@@ -59,6 +59,14 @@ public class Lab4P2_Grupo11 {
                 break;
                 case 4: {
 
+                }
+                break;
+                case 0:{
+                    System.out.println("Adios...");
+                }
+                break;
+                default:{
+                    System.out.println("No Valido");
                 }
                 break;
             }
