@@ -1,8 +1,9 @@
-
 package lab4p2_grupo11;
 
+import java.util.Random;
 
-public class FisicoyEspecial extends Movimiento{
+public class FisicoyEspecial extends Movimiento {
+
     public int PuntosDePoder;
     public int PuntosDePresicion;
 
@@ -48,6 +49,22 @@ public class FisicoyEspecial extends Movimiento{
     public String toString() {
         return "FisicoyEspecial{" + "PuntosDePoder=" + PuntosDePoder + ", PuntosDePresicion=" + PuntosDePresicion + '}';
     }
-    
-    
+
+    @Override
+    int Ataque(Pokemon pk, Pokemon pk2) {
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(50 - 1 + 1) + 1;
+        int daño;
+        if (pk.getATK() > pk2.getDEF()) {
+            daño = pk.getATK() * 2;
+            return daño;
+
+        } else if (pk.getATK() > pk2.getDEF()) {
+            daño = (int) (pk.getATK() * 0.5);
+            return daño;
+        } else {
+            return pk.getATK();
+        }
+    }
+
 }

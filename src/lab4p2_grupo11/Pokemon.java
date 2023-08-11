@@ -23,6 +23,10 @@ public class Pokemon {
         this.SPE = SPE;
     }
 
+    public Pokemon() {
+    }
+    
+
     public String getEspecie() {
         return Especie;
     }

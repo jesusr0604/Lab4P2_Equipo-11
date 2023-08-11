@@ -1,6 +1,10 @@
 package lab4p2_grupo11;
 
-public class ATTK extends Movimiento{
+import static java.lang.Math.random;
+import java.util.Random;
+
+public class ATTK extends Movimiento {
+
     public int PuntosDePoder;
     public int PuntosDePresicion;
 
@@ -30,7 +34,7 @@ public class ATTK extends Movimiento{
         return nombre;
     }
 
-        public void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -46,7 +50,17 @@ public class ATTK extends Movimiento{
     public String toString() {
         return "ATTK{" + "PuntosDePoder=" + PuntosDePoder + ", PuntosDePresicion=" + PuntosDePresicion + '}';
     }
-    
-    
-    
+
+    int Ataque(Pokemon pk, Pokemon pk2) {
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(50 - 1 + 1) + 1;
+        int numeroAleatorio2 = random.nextInt(500 - 100 + 1) + 100;
+        int suma= pk.getSP()+pk2.getSP();
+        
+        if (suma== numeroAleatorio2) {
+            numeroAleatorio=numeroAleatorio*2;
+        }
+        return numeroAleatorio;
+    }
+
 }

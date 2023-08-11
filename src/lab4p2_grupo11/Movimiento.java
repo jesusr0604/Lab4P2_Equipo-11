@@ -31,7 +31,9 @@ abstract class Movimiento {
         return "Movimiento{" + "nombre=" + nombre + ", Descripcion=" + Descripcion + '}';
     }
     
-    void Ataque(){   
+    int Ataque(Pokemon pk, Pokemon pk2){   
+    
+    return 0;
     }
     
     

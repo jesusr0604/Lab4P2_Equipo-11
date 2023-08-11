@@ -1,8 +1,12 @@
 package lab4p2_grupo11;
 
-public class Estado extends Movimiento{
+import static java.lang.Math.random;
+import java.util.Random;
+
+public class Estado extends Movimiento {
+
     public String ProblemaDeEstado;
-    
+
     public Estado(String nombre, String Descripcion) {
         super(nombre, Descripcion);
     }
@@ -41,6 +45,14 @@ public class Estado extends Movimiento{
         return "Estado{" + "ProblemaDeEstado=" + ProblemaDeEstado + '}';
     }
 
+    int Ataque(Pokemon pk, Pokemon pk2) {
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(100 - 1 + 1) + 1;
+        if (numeroAleatorio >75 ) {
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
-    
 }
