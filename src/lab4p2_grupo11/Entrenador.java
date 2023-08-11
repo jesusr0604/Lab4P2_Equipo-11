@@ -8,16 +8,28 @@ public class Entrenador {
     private String nombre;
     private int edad;
     private double dinero;
-    private Pokemon[] Pokemon = new Pokemon[5];
+    private ArrayList<Pokemon>Pokemon;
     private ArrayList<Pokemon>caja;
 
     public Entrenador() {
     }
 
+    public Entrenador(String nombre, int edad, double dinero, ArrayList<Pokemon> caja,ArrayList<Pokemon>Pokemon) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dinero = dinero;
+        this.caja = caja;
+        this.Pokemon=Pokemon;
+    }
+
+    
+    
+    /*
     public Entrenador(String nombre, int edad, double dinero) {
         this.nombre = nombre;
         this.edad = edad;
         this.dinero = dinero;
+        this.caja= caja;
     }
     
     
@@ -28,8 +40,12 @@ public class Entrenador {
         this.edad = edad;
         this.dinero = dinero;
         this.Pokemon = Pokemon;
+        this.caja=caja;
+        Pokemon e= new Pokemon();
+        caja.add(e);
 
     }
+*/
 
     public String getNombre() {
         return nombre;
@@ -55,13 +71,15 @@ public class Entrenador {
         this.dinero = dinero;
     }
 
-    public Pokemon[] getPokemon() {
+    public ArrayList<Pokemon> getPokemon() {
         return Pokemon;
     }
 
-    public void setPokemon(Pokemon[] Pokemon) {
+    public void setPokemon(ArrayList<Pokemon> Pokemon) {
         this.Pokemon = Pokemon;
     }
+
+    
 
     public ArrayList<Pokemon> getCaja() {
         return caja;
@@ -70,7 +88,7 @@ public class Entrenador {
     public void setCaja(ArrayList<Pokemon> caja) {
         this.caja = caja;
                 
-                
+        
     }
 
     @Override
@@ -78,6 +96,7 @@ public class Entrenador {
         return "Entrenador{" + "nombre=" + nombre + ", edad=" + edad + ", dinero=" + dinero + ", Pokemon=" + Pokemon + ", caja=" + caja + '}';
     }
 
+   
     
     
     

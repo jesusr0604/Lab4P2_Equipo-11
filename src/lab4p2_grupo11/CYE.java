@@ -30,33 +30,37 @@ public class CYE {
         Pokemon pokemonCapturado = new Pokemon(nuevoPokemon, lvl, puntos, HP, ATK, DEF, SP, SPE);
 
         System.out.print("¿Deseas agregar a " + nuevoPokemon + " al equipo (E) o a la PC (C)? ");
-        String opcion = scanner.nextLine();
-        if (opcion.equals("E")) {
-            if (entrenador.getPokemon().length >= 5) {
+        String opcion = scanner.nextLine().toLowerCase();
+        if (opcion.equals("e")) {
+            if (entrenador.getPokemon().size()<5) {
+                entrenador.getPokemon().add(pokemonCapturado);
+                System.out.println("Pokemon Agregado");
+                
+                
+                
+                
+            } else {
+                
                 System.out.println("El equipo del entrenador está completo. No se puede capturar más Pokémon.");
                 System.out.println("El Pokemon estara en la caja");
                 entrenador.getCaja().add(pokemonCapturado);
-            } else {
-                
-                Pokemon[] pol= entrenador.getPokemon();
-                
-                for (int i = 0; i < pol.length-1; i++) {
-                    if (pol[i]==null) {
-                        pol[i]= pokemonCapturado;
-                    }
-                }
-
-                
-                entrenador.setPokemon(pol);
                 
                 
                 
             }
-        } else if (opcion.equals("C")) {
+        } else if (opcion.equals("c")) {
             entrenador.getCaja().add(pokemonCapturado);
+            System.out.println("Pokemon ha sido trasladado a la caja");
         } else {
             System.out.println("Opción no válida.");
         }
     }
 
+    
+    
+    public void entrenar(Pokemon pokemon){
+        
+        
+        
+    }
 }

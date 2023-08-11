@@ -44,8 +44,11 @@ public class Lab4P2_Grupo11 {
                         System.out.println("Ingrese cuanto dinero tiene: ");
                         dinero = leer.nextDouble();
                     } while (dinero < 1);
-                    Entrenador T = new Entrenador(nombre, edad, dinero);
+                    ArrayList<Pokemon>caja = new ArrayList();
+                     ArrayList<Pokemon>Pokemon = new ArrayList();
+                    Entrenador T = new Entrenador(nombre, edad, dinero, caja,Pokemon);
                     trainer.add(T);
+                    
 
                 }
                 break;
@@ -74,6 +77,8 @@ public class Lab4P2_Grupo11 {
                                         System.out.println("Que Pokemon desea elegir");
                                         int pos2 = leer.nextInt()-1;
                                          trainer.get(pos).getCaja().get(pos2);
+                                         Pokemon a=  trainer.get(pos).getCaja().get(pos2);
+                                          
 
                                     }
                                     break;
