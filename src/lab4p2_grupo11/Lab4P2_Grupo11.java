@@ -1,5 +1,5 @@
-
 package lab4p2_grupo11;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,13 +16,12 @@ import javax.swing.JColorChooser;
 
 public class Lab4P2_Grupo11 {
 
-     static Scanner leer = new Scanner(System.in);
+    static Scanner leer = new Scanner(System.in);
     static Random ran = new Random();
-    
-    
+
     public static void main(String[] args) {
-        ArrayList<Entrenador>trainer= new ArrayList();
-        int res=0;
+        ArrayList<Entrenador> trainer = new ArrayList();
+        int res = 0;
         do {
             System.out.println("----- Bienvenido al sistema de carros de la Alcaldia de Tegucigalpa -----"
                     + "\n1 -> Registrar entrenador "
@@ -33,36 +32,36 @@ public class Lab4P2_Grupo11 {
                     + "\nIngrese la opcion que desea:");
 
             res = leer.nextInt();
-            switch(res){
-                case 1:{
+            switch (res) {
+                case 1: {
                     System.out.println("Ingrese su nombre: ");
                     String nombre = leer.next();
                     System.out.println("Ingrese su Edad: ");
-                    int edad= leer.nextInt();
-                    System.out.println("Ingrese cuanto dinero tiene: ");
-                    double dinero= leer.nextDouble();
+                    int edad = leer.nextInt();
+
+                    double dinero = 0;
                     do {
-                        System.out.println("Intente de nuevo: ");
-                        dinero=leer.nextDouble();
-                    } while (dinero<1);
-                    Entrenador T= new Entrenador(nombre,edad,dinero);
+                        System.out.println("Ingrese cuanto dinero tiene: ");
+                        dinero = leer.nextDouble();
+                    } while (dinero < 1);
+                    Entrenador T = new Entrenador(nombre, edad, dinero);
                     trainer.add(T);
-                    
+
                 }
                 break;
-                case 2:{
-                    
+                case 2: {
+
                 }
                 break;
-                case 3:{
-                    
+                case 3: {
+
                 }
                 break;
-                case 4:{
-                    
+                case 4: {
+
                 }
                 break;
             }
-    }while (res!=0);
-        }
+        } while (res != 0);
+    }
 }
