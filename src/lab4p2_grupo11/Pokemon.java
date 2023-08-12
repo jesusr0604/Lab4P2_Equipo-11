@@ -10,7 +10,7 @@ public class Pokemon {
     public int DEF;
     public int SP;
     public String SPE;
-    public Movimiento[] numeros = new Movimiento[4];
+    public Movimiento[] numeros = new Movimiento[3];
 
     public Pokemon(String Especie, int Lvl, int PuntosXP, int HP, int ATK, int DEF, int SP, String SPE) {
         this.Especie = Especie;
